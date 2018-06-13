@@ -1,0 +1,31 @@
+/* pages/member/member.wxss */
+.me_content{
+  padding-top: 80rpx;
+}
+#userinfo{
+  height: 400rpx;
+  background-color: #f7d8e6;
+  overflow:hidden;
+}
+#userinfo .head{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  display: block;
+  margin: 50rpx auto;
+}
+#userinfo .uname{
+  text-align: center;
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+  
+}
+#userinfo .usex{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align:middle;
+}
+#usermenu .umenu{
+  height: 100rpx;
+}

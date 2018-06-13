@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/member/member",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "想你",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#f988bc",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/tabbar/index_a.png",
+        "iconPath": "images/tabbar/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/tabbar/user_a.png",
+        "iconPath": "images/tabbar/user.png",
+        "pagePath": "pages/member/member",
+        "text": "个人中心"
+      },
+      {
+        "selectedIconPath": "images/tabbar/user_a.png",
+        "iconPath": "images/tabbar/user.png",
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+    ]
+  }
+}
