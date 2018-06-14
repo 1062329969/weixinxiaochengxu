@@ -7,12 +7,19 @@ Page({
    */
   data: {
     userInfo: {},
+    topnav:'Me'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    if (!app.globalData.islogin){
+      wx.redirectTo({//关闭当前页面，跳转到应用内的某个页面
+        url: '../login/login'
+      })
+    }
     if (app.globalData.userInfo) {
       
       this.setData({

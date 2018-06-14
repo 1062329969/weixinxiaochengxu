@@ -1,0 +1,4 @@
+<!--templates/header/header.wxml-->
+<template name="header">
+  <view class='topnav'>{{topnav}}</view>
+</template>

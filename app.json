@@ -2,7 +2,9 @@
   "pages":[
     "pages/member/member",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/login/login",
+    "templates/header/header"
   ],
   "window":{
     "backgroundTextStyle":"light",

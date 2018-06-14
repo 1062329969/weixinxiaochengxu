@@ -1,4 +1,5 @@
 /* pages/member/member.wxss */
+@import "../../templates/header/header.wxss";
 .me_content{
   padding-top: 80rpx;
 }
@@ -24,8 +25,25 @@
 #userinfo .usex{
   width: 40rpx;
   height: 40rpx;
-  vertical-align:middle;
+  position: absolute;
+  right:255rpx;
+  bottom:10rpx;
+  /* vertical-align:middle; */
 }
 #usermenu .umenu{
   height: 100rpx;
+  line-height: 100rpx;
+  text-align: left;
+  /* padding-left: 30rpx; */
+  border-bottom: 1px #ccc solid;
+  font-size: 14px;
+}
+#headview{
+  position: relative;
+}
+.membericon{
+  width: 25px;
+  height: 25px;
+  margin: auto 15px;
+  vertical-align: middle;
 }

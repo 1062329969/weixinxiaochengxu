@@ -1,20 +1,31 @@
 <!--pages/member/member.wxml-->
-<view class='topnav'>Me</view>
+<import src="../../templates/header/header"/>
+<template is="header" data="{{topnav}}"></template>
 <view class='me_content'>
   <view id='userinfo'>
-    <image src="{{userInfo.avatarUrl}}" class='head'></image>
-    <view class='uname'>
-      {{userInfo.nickName}}
+    <view id='headview'>
+      <image src="{{userInfo.avatarUrl}}" class='head'></image>
       <image wx:if="{{userInfo.gender ==1 }}" src="/images/member/boy.png" class='usex'></image>
       <image wx:elif="{{userInfo.gender == 2}}" src="/images/member/girl.png" class='usex'></image>
+    </view>
+    <view class='uname'>
+      {{userInfo.nickName}}
+      
     </view>
     
   </view>
   <view id='usermenu'>
-    <view class='umenu'>test</view>
-    <view class='umenu'>test</view>
-    <view class='umenu'>test</view>
-    <view class='umenu'>test</view>
-    <view class='umenu'>test</view>
+    <view class='umenu'>
+      <image src='/images/member/mylove.png' class='membericon'></image>
+      我的另一半/邀请二维码
+    </view>
+    <view class='umenu'>
+      <image src='/images/member/editpwd.png' class='membericon'></image>
+      修改密码
+    </view>
+    <view class='umenu'>
+      <image src='/images/member/give.png' class='membericon'></image>
+      投诉建议
+    </view>
   </view>
 </view>
