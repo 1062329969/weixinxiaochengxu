@@ -1,3 +1,20 @@
 <!--pages/login/login.wxml-->
-<import src="../../templates/header/header"/>
+<import src="/templates/header/header"/>
 <template is="header" data="{{topnav}}"></template>
+<view id='login_view'>
+  <image id='logo' src='/images/login/heart.png'></image>
+  <form class="page__bd" bindsubmit="formSubmit">
+    <view class='input_view'>
+      <image src='/images/login/user.png' class='unamelabel'></image>
+      <input type='text' name="u_name" placeholder="请输入用户名" />
+    </view>
+    <view class='input_view'>
+      <image src='/images/login/pwd.png' class='unamelabel'></image>
+      <input type='text' name="u_passwd" placeholder="请输入密码" password="true"/>
+    </view>
+    
+    <view class="btn-area">
+      <button class='submit' form-type="submit">登录</button>
+    </view>
+  </form>
+</view>

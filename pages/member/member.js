@@ -15,11 +15,11 @@ Page({
    */
   onLoad: function (options) {
 
-    if (!app.globalData.islogin){
-      wx.redirectTo({//关闭当前页面，跳转到应用内的某个页面
-        url: '../login/login'
-      })
-    }
+    // if (!app.globalData.islogin){
+    //   wx.redirectTo({//关闭当前页面，跳转到应用内的某个页面
+    //     url: '../login/login'
+    //   })
+    // }
     if (app.globalData.userInfo) {
       
       this.setData({

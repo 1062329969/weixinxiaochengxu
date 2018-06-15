@@ -1,2 +1,45 @@
 /* pages/login/login.wxss */
 @import "../../templates/header/header.wxss";
+page{
+  height:100%;
+  }
+#login_view{
+  padding-top: 80rpx;
+  height: 100%;
+  background: #fde0ee;
+  overflow:hidden;
+}
+
+#logo{
+  display: block;
+  margin: 80rpx auto;
+  width: 400rpx;
+  height: 400rpx;
+}
+/* form{
+   margin-top: 80rpx; 
+  background: #827cff;
+  height: 100px;
+} */
+form image{
+  width: 70rpx;
+  height: 70rpx;
+  float: left;
+  margin-right: 25rpx;
+}
+form input{
+  border-bottom: 2px #000 solid;
+  
+}
+.input_view{
+  overflow: hidden;
+  width: 60%;
+  margin: 35rpx auto;
+}
+
+.submit{
+  width: 300rpx;
+  background: #ff79ac;
+  border: 0;
+  color: #fff;
+}
