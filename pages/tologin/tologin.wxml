@@ -1,0 +1,6 @@
+<!--pages/tologin/tologin.wxml-->
+<view>
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+  <image src='/images/tologin/dj.png'></image>
+  <view id="shouquan">点击并同意获取授权</view>
+</view>

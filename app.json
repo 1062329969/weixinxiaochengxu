@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/login/login",
-    "templates/header/header"
+    "templates/header/header",
+    "pages/tologin/tologin"
   ],
   "window":{
     "backgroundTextStyle":"light",

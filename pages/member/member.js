@@ -7,7 +7,8 @@ Page({
    */
   data: {
     userInfo: {},
-    topnav:'Me'
+    topnav:'Me',
+    loveid:0,
   },
 
   /**
@@ -21,7 +22,6 @@ Page({
     //   })
     // }
     if (app.globalData.userInfo) {
-      
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
@@ -35,11 +35,11 @@ Page({
           hasUserInfo: true
         })
       }
+      
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
-          console.log(res.userInfo)
           app.globalData.userInfo = res.userInfo
           this.setData({
             userInfo: res.userInfo,
@@ -48,6 +48,28 @@ Page({
         }
       })
     }
+    wx.getUserInfo({
+      withCredentials: true,
+      success: function (res) {
+        //此处为获取微信信息后的业务方法
+      },
+      fail: function () {
+        //获取用户信息失败后。请跳转授权页面
+        wx.showModal({
+          title: '警告',
+          content: '尚未进行授权，请点击确定跳转到授权页面进行授权。',
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+              wx.navigateTo({
+                url: '../tologin/tologin',
+              })
+            }
+          }
+        })
+      }
+    })
+    
   },
   getUserInfo: function (e) {
     console.log(e)
@@ -57,18 +79,37 @@ Page({
       hasUserInfo: true
     })
   },
+  
+  getinfo:function(e){
+    wx.request({
+      url: app.globalData.dataurl + '/member/mylove', //仅为示例，并非真实的接口地址
+      method: "POST",
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    console.log('ready')
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    var loveid = wx.getStorageSync('loveid')
+    console.log(11+loveid)
+    this.setData({
+      userInfo: app.globalData.userInfo,
+      hasUserInfo: true,
+      loveid: loveid
+    })
   },
 
   /**

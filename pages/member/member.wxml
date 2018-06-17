@@ -15,12 +15,16 @@
     
   </view>
   <view id='usermenu'>
-    <view class='umenu'>
+    <view class='umenu' wx:if="{{loveid>0}}" data-attr="{{loveid}}">
       <image src='/images/member/mylove.png' class='membericon'></image>
-      我的另一半/邀请二维码
+      我的另一半
     </view>
-    <view class='umenu'>
-      <image src='/images/member/editpwd.png' class='membericon'></image>
+    <view class='umenu' wx:elif="{{loveid==0}}" data-attr="{{loveid}}">
+      <image src='/images/member/mylove.png' class='membericon'></image>
+      我的爱之码
+    </view>
+    <view bindtap='getinfo' class='umenu'>
+      <image src='/images/member/editpwd.png' bindtap='getinfo' class='membericon'></image>
       修改密码
     </view>
     <view class='umenu'>
