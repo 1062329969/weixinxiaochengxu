@@ -104,6 +104,9 @@ Page({
    */
   onShow: function () {
     var loveid = wx.getStorageSync('loveid')
+    console.log(app.globalData.userInfo)
+    if (!loveid && !wx.setStorageSync('openid')){
+    }
     console.log(11+loveid)
     this.setData({
       userInfo: app.globalData.userInfo,

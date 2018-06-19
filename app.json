@@ -1,8 +1,7 @@
 {
   "pages":[
-    "pages/member/member",
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/member/member",
     "pages/login/login",
     "templates/header/header",
     "pages/tologin/tologin"
@@ -29,12 +28,6 @@
         "iconPath": "images/tabbar/user.png",
         "pagePath": "pages/member/member",
         "text": "个人中心"
-      },
-      {
-        "selectedIconPath": "images/tabbar/user_a.png",
-        "iconPath": "images/tabbar/user.png",
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
       }
     ]
   }
