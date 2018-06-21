@@ -7,3 +7,31 @@
     </swiper-item>
   </block>
 </swiper>
+<view id='content'>
+  <view class='lists'>
+    <view class='pic_and_text'>
+      <image></image>
+      <text>1111111111111111111111111111111111111111111111111111</text>
+    </view>
+    <view class='dooption'>
+      <image src='/images/index/views.png'></image><view class='icon_sum'>111</view>
+      <view class='right_icon_view'>
+        <image class='right_icon' src='/images/index/like.png'></image><view class='icon_sum'>111</view>
+        <image class='right_icon' src='/images/index/report.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='lists'>
+    <view class='pic_and_text'>
+      <image></image>
+      <text>111</text>
+    </view>
+    <view class='dooption'>
+      <image src='/images/index/views.png'></image><view class='icon_sum'>111</view>
+      <view class='right_icon_view'>
+        <image class='right_icon' src='/images/index/like.png'></image><view class='icon_sum'>111</view>
+        <image class='right_icon' src='/images/index/report.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
