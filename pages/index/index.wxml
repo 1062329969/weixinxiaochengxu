@@ -8,30 +8,19 @@
   </block>
 </swiper>
 <view id='content'>
-  <view class='lists'>
-    <view class='pic_and_text'>
-      <image></image>
-      <text>1111111111111111111111111111111111111111111111111111</text>
-    </view>
-    <view class='dooption'>
-      <image src='/images/index/views.png'></image><view class='icon_sum'>111</view>
-      <view class='right_icon_view'>
-        <image class='right_icon' src='/images/index/like.png'></image><view class='icon_sum'>111</view>
-        <image class='right_icon' src='/images/index/report.png'></image>
+  <block wx:for="{{infolist}}">
+    <view class='lists'>
+      <view class='pic_and_text'>
+        <image src='{{BaseUrl}}{{item.a_img}}'></image>
+        <text>{{item.a_content}}</text>
+      </view>
+      <view class='dooption'>
+        <image src='/images/index/views.png'></image><view class='icon_sum'>{{item.a_view}}</view>
+        <view class='right_icon_view'>
+          <image class='right_icon' src='/images/index/like.png'></image><view class='icon_sum'>{{item.a_praise}}</view>
+          <image class='right_icon' src='/images/index/report.png'></image>
+        </view>
       </view>
     </view>
-  </view>
-  <view class='lists'>
-    <view class='pic_and_text'>
-      <image></image>
-      <text>111</text>
-    </view>
-    <view class='dooption'>
-      <image src='/images/index/views.png'></image><view class='icon_sum'>111</view>
-      <view class='right_icon_view'>
-        <image class='right_icon' src='/images/index/like.png'></image><view class='icon_sum'>111</view>
-        <image class='right_icon' src='/images/index/report.png'></image>
-      </view>
-    </view>
-  </view>
+  </block>
 </view>

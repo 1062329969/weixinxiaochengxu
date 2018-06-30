@@ -19,7 +19,7 @@
       <image src='/images/member/mylove.png' class='membericon'></image>
       我的另一半
     </view>
-    <view class='umenu' wx:elif="{{loveid==0}}" data-attr="{{loveid}}">
+    <view class='umenu' wx:elif="{{loveid==0}}" bindtap='myewm' data-attr="{{loveid}}">
       <image src='/images/member/mylove.png' class='membericon'></image>
       我的爱之码
     </view>

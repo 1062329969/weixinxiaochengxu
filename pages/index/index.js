@@ -12,7 +12,11 @@ Page({
     indicatorDots: true,
     autoplay: true,
     interval: 3000,
-    duration: 1000
+    duration: 1000,
+    pages:1,
+    infolist:null,
+    BaseUrl:'',
+    maxpage:0
   },
   
   //事件处理函数
@@ -76,6 +80,10 @@ Page({
         })
       }
     })
+    this.getlist();
+    this.setData({
+      BaseUrl: app.globalData.dataurl
+    })
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -84,5 +92,55 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  getlist: function(){
+    var that = this
+    var pages = this.data.pages
+    console.log(pages)
+    wx.request({
+      url: app.globalData.dataurl + '/index/list', //仅为示例，并非真实的接口地址
+      data: {
+        page: pages,
+      },
+      method: "GET",
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        that.setData({
+          infolist:res.data.data,
+          maxpage:res.data.last_page,
+          pages: pages+1
+        })
+        console.log(res.data)
+      }
+    })
+  },
+  onReachBottom: function () {
+    if (this.data.maxpage+1 == this.data.pages){
+      return false; 
+    }
+    var that = this
+    var pages = this.data.pages
+    var infolist = that.data.infolist
+    console.log(infolist)
+    wx.request({
+      url: app.globalData.dataurl + '/index/list', //仅为示例，并非真实的接口地址
+      data: {
+        page: pages,
+      },
+      method: "GET",
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        infolist = infolist.concat(res.data.data)
+        that.setData({
+          infolist: infolist,
+          pages: pages + 1
+        })
+        console.log(infolist)
+      }
+    })
+  },
 })

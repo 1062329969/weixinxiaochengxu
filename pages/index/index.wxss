@@ -34,7 +34,7 @@ page{
   height: 50rpx;
   line-height: 50rpx;
   padding-left: 20rpx;
-  width: 100%; 
+  width: 10%; 
   margin: 0 auto;
   display: block;
   bottom: 0;

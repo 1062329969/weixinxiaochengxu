@@ -4,7 +4,8 @@
     "pages/member/member",
     "pages/login/login",
     "templates/header/header",
-    "pages/tologin/tologin"
+    "pages/tologin/tologin",
+    "pages/myewm/myewm"
   ],
   "window":{
     "backgroundTextStyle":"light",

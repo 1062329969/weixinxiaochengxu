@@ -27,7 +27,9 @@ Page({
             'content-type': 'application/json' // 默认值
           },
           success: function (res) {
-            console.log(res.data)
+            if(res.data.code){
+              wx.setStorageSync('sessionid', res.data.sessionid)
+            }
           }
         })
 

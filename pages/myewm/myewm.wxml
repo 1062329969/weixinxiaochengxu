@@ -1,0 +1,5 @@
+<!--pages/myewm/myewm.wxml-->
+<import src="../../templates/header/header"/>
+<template is="header" data="{{topnav}}"></template>
+<button>扫一扫</button>
+<image src='{{BaseUrl}}{{ewm}}'></image>

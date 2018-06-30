@@ -104,14 +104,17 @@ Page({
    */
   onShow: function () {
     var loveid = wx.getStorageSync('loveid')
-    console.log(app.globalData.userInfo)
-    if (!loveid && !wx.setStorageSync('openid')){
-    }
+    console.log(wx.getStorageSync('openid'))
     console.log(11+loveid)
     this.setData({
       userInfo: app.globalData.userInfo,
       hasUserInfo: true,
       loveid: loveid
+    })
+  },
+  myewm: function(){
+    wx.navigateTo({
+      url: '../myewm/myewm',
     })
   },
 

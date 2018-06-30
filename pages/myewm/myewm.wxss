@@ -1,0 +1,7 @@
+/* pages/myewm/myewm.wxss */
+@import "../../templates/header/header.wxss";
+image{
+  width: 650rpx;
+  height: 650rpx;
+  margin: 50rpx;
+}
