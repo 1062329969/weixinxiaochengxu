@@ -1,0 +1,53 @@
+/* pages/backed/backed.wxss */
+@import "../../templates/header/header.wxss";
+.me_content{
+  padding-top: 80rpx;
+}
+.section{
+  clear: both;
+  overflow: hidden;
+  
+  border-bottom: 1px #ccc dashed;
+}
+.section__title{
+  width: 20%;
+  float: left;
+  text-align: right;
+  font-size: 16px;
+  padding-left: 32rpx;
+  margin-right: 10%;
+}
+.inputs{
+  width: 60%;
+  float: left;
+  margin: 0;
+}
+.section_gap{
+  height: 200rpx;
+  line-height: 200rpx;
+}
+.stext{
+  height: 300rpx;
+  line-height: 300rpx;
+  padding: 16rpx;
+}
+textarea{
+  border: 1px #ccc solid;
+  line-height: normal
+}
+.btn-area button{
+  display: block;
+  float: left;
+  width: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+.submit{
+  background: #f988bc;
+  color: #fff;
+}
+.reset{
+  background: #f988bc;
+  color: #fff;
+}

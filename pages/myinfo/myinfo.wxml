@@ -1,0 +1,10 @@
+<!--pages/myinfo/myinfo.wxml-->
+<import src="../../templates/header/header"/>
+<template is="header" data="{{topnav}}"></template>
+<view class='me_content'>
+  <view class='infoview'>
+    <image></image>
+    <text>111</text>
+  </view>
+  <button></button>
+</view>

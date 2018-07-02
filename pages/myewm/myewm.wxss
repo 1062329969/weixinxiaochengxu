@@ -1,7 +1,24 @@
 /* pages/myewm/myewm.wxss */
 @import "../../templates/header/header.wxss";
+.me_content{
+  padding-top: 80rpx;
+}
+.sys{
+  width:50%;
+  margin-top:25rpx;
+  background:#f988bc;
+  color: #fff;
+}
 image{
   width: 650rpx;
   height: 650rpx;
   margin: 50rpx;
+}
+
+.tipsview{
+  height: 1000rpx;
+  position: fixed;
+  width: 100%;
+  background-color: #000;
+  z-index: 999;
 }

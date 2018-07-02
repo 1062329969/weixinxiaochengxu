@@ -69,8 +69,30 @@ Page({
         })
       }
     })
-    
+    this.getuser();
   },
+  getuser: function (){
+    var openid = wx.getStorageSync('openid')
+    var that = this
+    wx.request({
+      url: app.globalData.dataurl + '/member/myinfo', //仅为示例，并非真实的接口地址
+      method: "POST",
+      data: {
+        openid: openid,
+      },
+      header: {
+        'content-type': 'application/json', // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+        wx.setStorageSync('loveid', res.data.u_loveid)
+        that.setData({
+          loveid: res.data.u_loveid
+        })
+      }
+    })
+  },
+
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -115,6 +137,16 @@ Page({
   myewm: function(){
     wx.navigateTo({
       url: '../myewm/myewm',
+    })
+  },
+  gotoback: function () {
+    wx.navigateTo({
+      url: '../backed/backed',
+    })
+  },
+  myinfo:function(){
+    wx.navigateTo({
+      url: '../myinfo/myinfo',
     })
   },
 

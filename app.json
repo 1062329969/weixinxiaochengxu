@@ -1,11 +1,13 @@
 {
   "pages":[
-    "pages/index/index",
+    "pages/myinfo/myinfo",
     "pages/member/member",
     "pages/login/login",
     "templates/header/header",
     "pages/tologin/tologin",
-    "pages/myewm/myewm"
+    "pages/myewm/myewm",
+    "pages/backed/backed",
+    "pages/index/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

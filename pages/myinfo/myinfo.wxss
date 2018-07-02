@@ -1,0 +1,5 @@
+/* pages/myinfo/myinfo.wxss */
+@import "../../templates/header/header.wxss";
+.me_content{
+  padding-top: 80rpx;
+}

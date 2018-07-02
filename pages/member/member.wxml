@@ -23,11 +23,15 @@
       <image src='/images/member/mylove.png' class='membericon'></image>
       我的爱之码
     </view>
-    <view bindtap='getinfo' class='umenu'>
+    <view bindtap='myinfo' class='umenu'>
+      <image src='/images/member/editpwd.png' bindtap='getinfo' class='membericon'></image>
+      我的消息
+    </view>
+    <!-- <view bindtap='getinfo' class='umenu'>
       <image src='/images/member/editpwd.png' bindtap='getinfo' class='membericon'></image>
       修改密码
-    </view>
-    <view class='umenu'>
+    </view> -->
+    <view class='umenu' bindtap='gotoback'>
       <image src='/images/member/give.png' class='membericon'></image>
       投诉建议
     </view>

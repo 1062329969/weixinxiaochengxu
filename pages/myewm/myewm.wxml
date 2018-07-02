@@ -1,5 +1,8 @@
 <!--pages/myewm/myewm.wxml-->
 <import src="../../templates/header/header"/>
 <template is="header" data="{{topnav}}"></template>
-<button bindtap='dosys'>扫一扫</button>
-<image src='{{BaseUrl}}{{ewm}}'></image>
+<view class='me_content'>
+<button bindtap='dosys' class='sys'>扫一扫</button>
+<image bindtap='entercode' src='{{BaseUrl}}{{ewm}}'></image>
+</view>
+

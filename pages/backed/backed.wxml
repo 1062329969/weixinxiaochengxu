@@ -1,0 +1,21 @@
+<!--pages/backed/backed.wxml-->
+<import src="../../templates/header/header"/>
+<template is="header" data="{{topnav}}"></template>
+<view class='me_content'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section section_gap">
+      <view class="section__title">好评分</view>
+      <slider class='inputs' name="praisescore" show-value ></slider>
+    </view>
+    
+    <view class="section stext">
+      <view class="section__title">意见建议</view>
+      <textarea class='inputs' name='backcontent' placeholder="请输入"  />
+    </view>
+    
+    <view class="btn-area">
+      <button class='submit' formType="submit">提交</button>
+      <button class='reset' formType="reset">取消</button>
+    </view>
+  </form>
+</view>
